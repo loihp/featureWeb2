@@ -55,7 +55,7 @@ function render() {
       <p class="main__order-name">${item.name}</p>
       <div class="main__order btn">
           <button class="btn-down">-</button>
-          <input type="number" value=${item.quantity}>
+          <input id='hello' type="number" value=${item.quantity}>
           <button class="btn-up">+</button>
       </div>
       <div class="main__order-detail">
@@ -66,21 +66,34 @@ function render() {
   </div>`
     )
     .join("");
+
+  // document.getElementById;
+  // let [...inc] = document.getElementsByClassName("btn-up");
+  // for (let i = 0; i < inc.length; i++) {
+  //   detele[i].addEventListener("click", () => {
+  //     remove(i);
+  //     console.log("da vo");
+  //   });
+  // }
+  // let [...dec] = document.getElementsByClassName("btn-down");
+  // console.log(inc, dec);
   document.getElementById("render").innerHTML = html;
-  let detele = document.querySelectorAll("delete");
+
+  let [...detele] = document.getElementsByClassName("delete");
+  console.log(detele);
   for (let i = 0; i < detele.length; i++) {
     detele[i].addEventListener("click", () => {
       remove(i);
+      console.log("da vo");
     });
   }
 
   let total = subTotal + ship;
 
-  console.log(items.length);
   console.log(items.map((item) => item.price));
-  document.getElementById("sub").innerText = `$${subTotal.toFixed(2)}`;
-  document.getElementById("ship").innerText = `$${ship}`;
-  document.getElementById("total").innerText = `$${total.toFixed(2)}`;
+  $("#sub").innerText = `$${subTotal.toFixed(2)}`;
+  $("#ship").innerText = `$${ship}`;
+  $("#total").innerText = `$${total.toFixed(2)}`;
 }
 
 function add() {
@@ -94,7 +107,7 @@ function add() {
 
 function remove(index) {
   items.splice(index, 1);
-  render;
+  render();
 }
 
 document.getElementById("add").addEventListener("click", () => {
