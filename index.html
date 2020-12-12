@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h4>The Nav</h4>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About </a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+        <i class="fas fa-bars bars"></i>
+        <i class="fas fa-times close"></i>
+    </nav>
+
+    <section>
+        <div class="hero">
+            <div class="top"></div>
+            <div class="container">
+                <img src="https://upload.wikimedia.org/wikipedia/vi/7/7e/Logo_KFC.svg" alt="">
+
+                <div class="main">
+
+                    <div class="main__title">
+                        <h2 class="main__title-1">Your order</h2>
+                        <h2 class="main__title-2">from KFC</h2>
+                    </div>
+
+                    <div id="render">
+                        <div class="main__order">
+                            <p class="main__order-name">British Pizza | Medium</p>
+                            <div class="main__order btn">
+                                <button class="btn-down">-</button>
+                                <input type="number" value="1">
+                                <button class="btn-up">+</button>
+                            </div>
+                            <div class="main__order-detail">
+                                <p class="order__detail-price">$7.99</p>
+                                <button class="btn-remove">X</button>
+                            </div>
+                        </div>
+                        <div class="main__order">
+                            <p class="main__order-name">British Pizza | Medium</p>
+                            <div class="main__order btn">
+                                <button class="btn-down">-</button>
+                                <input type="number" value="1">
+                                <button class="btn-up">+</button>
+                            </div>
+                            <div class="main__order-detail">
+                                <p class="order__detail-price">$7.99</p>
+                                <button class="btn-remove">X</button>
+                            </div>
+                        </div>
+                        <div class="main__order">
+                            <p class="main__order-name">British Pizza | Medium</p>
+                            <div class="main__order btn">
+                                <button class="btn-down">-</button>
+                                <input type="number" value="1">
+                                <button class="btn-up">+</button>
+                            </div>
+                            <div class="main__order-detail">
+                                <p class="order__detail-price">$7.99</p>
+                                <button class="btn-remove">X</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="main__btn">
+                        <button id="add" class="main__btn-add">Add a beverage</button>
+                    </div>
+
+                    <div class="container__form form">
+                        <div class="left">
+                            <p class="left__sub">Subtotal</p>
+                            <p class="left__ship">Shipping</p>
+                            <p class="left__total">Total(TVA incl.)</p>
+                        </div>
+                        <div class="right">
+                            <p id="sub" class="right__sub">$15.98</p>
+                            <p id="ship" class="right__ship">$2</p>
+                            <p id="total" class="right__total">$17.98</p>
+                        </div>
+                    </div>
+
+                    <div class="checkout">
+                        <button>Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>
